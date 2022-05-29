@@ -16,7 +16,7 @@ import java.time.LocalDateTime;
 import java.util.List;
 @Controller
 @RequiredArgsConstructor
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "https://suyash-blog-react.herokuapp.com/")
 @RequestMapping("/v1/api/blog")
 public class BlogController {
     @Autowired
