@@ -1,0 +1,359 @@
+{
+	"info": {
+		"_postman_id": "d2cf5a72-b438-4fdc-aeaf-d4d9e9939f2f",
+		"name": "Blog",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzcmlqYW4iLCJyb2xlcyI6WyJBZG1pbiIsIlN1cGVyQWRtaW4iXSwiaXNzIjoiL2xvZ2luIiwiZXhwIjoxNjUzODM0MjgxfQ.VHWATmzNO7fPwVC2REkgotCK4J8mV0Pp_WpTJlp_0V8",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Suyash\",\n    \"email\": \"suyash@gmail.com\",\n    \"password\": \"password\",\n    \"securityQuestion\": \"BIRTH\",\n    \"securityAnswer\": \"securityAnswer\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{remote}}/v1/api/user/create",
+					"host": [
+						"{{remote}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user Role",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "ebf2e268-79af-40fb-8966-81969c9d0d5a",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "user",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\":\"Reader\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/role/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"role",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Users",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXlhc2giLCJyb2xlcyI6WyJBZG1pbiJdLCJpc3MiOiIvbG9naW4iLCJleHAiOjE2NTM4MzQxMDZ9.5eAM8ZZD2eIgwX8bI7ZZxy3E5puE2uw5ssxqrHHQk1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{remote}}/v1/api/user/list",
+					"host": [
+						"{{remote}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add user Role",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXlhc2giLCJyb2xlcyI6WyJBZG1pbiJdLCJpc3MiOiIvbG9naW4iLCJleHAiOjE2NTM3NTgyOTd9.4CvcNa7nBY1NOVui3H7DyVZtRlw7bSgg1SBguyxxdkY",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"employeeName\": \"Rajesh\",\n    \"roleName\": \"Admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/user/add-role",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"user",
+						"add-role"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Fetch credentials",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "srijan",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "passwordSrijan",
+							"type": "text"
+						}
+					],
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{remote}}/login",
+					"host": [
+						"{{remote}}"
+					],
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "List of Blogs",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://blog-springboot-suyash.herokuapp.com/v1/api/blog/list",
+					"protocol": "https",
+					"host": [
+						"blog-springboot-suyash",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"list"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Blog",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzdXlhc2giLCJyb2xlcyI6WyJBZG1pbiJdLCJpc3MiOiIvbG9naW4iLCJleHAiOjE2NTM4MzQxMDZ9.5eAM8ZZD2eIgwX8bI7ZZxy3E5puE2uw5ssxqrHHQk1k",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"First\",\n    \"description\": \"description for the post\",\n    \"createdBy\": \"srijan\",\n    \"status\": \"published\"\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{remote}}/v1/api/blog/create",
+					"host": [
+						"{{remote}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/v1/api/blog/listby/{user}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/blog/listby/srijan",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"listby",
+						"srijan"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/v1/api/blog/listby-time/{order:boolean}",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/blog/listby-time/false",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"listby-time",
+						"false"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "find Blog by id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{remote}}/v1/api/blog/findByTitle/First Blog",
+					"host": [
+						"{{remote}}"
+					],
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"findByTitle",
+						"First Blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "list of all creator",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/api/blog/allCreator",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"blog",
+						"allCreator"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
