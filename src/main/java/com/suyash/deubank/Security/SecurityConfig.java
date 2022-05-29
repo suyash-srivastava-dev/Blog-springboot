@@ -38,12 +38,12 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(HttpSecurity http) throws Exception {
         http.csrf().disable();
         http.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-//        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/user/**").hasAnyAuthority("SuperAdmin");
-//        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/create").hasAnyAuthority("SuperAdmin","Admin");
-//        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/update").hasAnyAuthority("SuperAdmin");
-//        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/**").hasAnyAuthority("SuperAdmin","Admin","Reader");
+        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/user/**").hasAnyAuthority("SuperAdmin");
+        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/create").hasAnyAuthority("SuperAdmin","Admin");
+        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/update").hasAnyAuthority("SuperAdmin");
+        http.authorizeHttpRequests().antMatchers(POST,"/v1/api/blog/**").hasAnyAuthority("SuperAdmin","Admin","Reader");
 
-        http.authorizeHttpRequests().anyRequest().permitAll();
+//        http.authorizeHttpRequests().anyRequest().permitAll();
         http.addFilterBefore(new CustomAuthorizationFilter(), UsernamePasswordAuthenticationFilter.class);
         http.addFilter(new CustomAuthenticationFilter(authenticationManagerBean()));
     }
