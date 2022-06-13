@@ -2,6 +2,8 @@
 
 **This App is deployed over 2 different heroku servers, so refresh multiple times as project is most likely to be sleeping**
 
+# LIVE:  https://suyash-blog-react.herokuapp.com/
+
 ## Application Details:
 
 #### Database
