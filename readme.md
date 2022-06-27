@@ -54,7 +54,7 @@ Screenshots:
 
 3. Signin and Signup (pending)
 
-![image](https://user-images.githubusercontent.com/68404906/170889788-458c27eb-43b6-4652-b7b7-277967762d56.png)
+![image](https://user-images.githubusercontent.com/68404906/175963107-7817a9bb-d8a3-4a1e-8a23-757999591686.png)
 
 
 Basic app where user can create,edit,delete blogs, with sorting for blogs on the basis of creation time, and filter blogs on basis of creator.
