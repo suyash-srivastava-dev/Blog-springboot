@@ -31,9 +31,6 @@ url :
 
 Implemented all the controllers with JPA services, have added securities for user roles with help of JWT. And policies for APIs so that user with specific role could access the content/APIs.
 
-Command:
-
-    git push heroku master
 
 ### Frontend [video](https://youtu.be/c_gPkblHAik)
 
